@@ -89,16 +89,16 @@ export default function Weather() {
     <div className='my-6 weather-bg'>
     <div className='flex mx-10 py-5'>
         <div className='flex-auto w-60 sm:w-50 left'>
-        {search == '' ? <p className='text-3xl font-semibold'>{data.name}</p>:<p className='text-3xl font-semibold'>{search.name}</p>}
-        <p className='text-md'>{getDate(new Date)} / {getCurrentDate()}</p>
-        {search == '' ? <h1 className='sm:text-5x1 text-8xl font-bold'>{Math.floor(data.main?.temp)}°</h1>:<h1 className='sm:text-5x1 text-8xl font-bold'>{Math.round(search.main?.temp)}°</h1>}
-        {search == '' ? <p className='text-lg'>Wind: {data.wind?.deg}   deg</p>:<p className='text-lg'>Wind: {search.wind?.deg}   deg</p>}
-        {search == '' ? <p className='text-lg'>Preasure: {data.main?.pressure}</p>:<p className='text-lg'>Preasure: {search.main?.pressure}</p>}
+        {search == '' ? <p className='text-2xl lg:text-4xl font-semibold mb-2'>{data.name}</p>:<p className='text-2xl lg:text-4xl font-semibold mb-2'>{search.name}</p>}
+        <p className='text-sm lg:text-md'>{getDate(new Date)} / {getCurrentDate()}</p>
+        {search == '' ? <h1 className='text-7xl font-bold lg:text-8xl mb-2'>{Math.floor(data.main?.temp)}°</h1>:<h1 className='text-7xl font-bold lg:text-8xl mb-2'>{Math.round(search.main?.temp)}°</h1>}
+        {search == '' ? <p className='md:text-xl lg:text-lg mb-0'>Wind: {data.wind?.deg}   deg</p>:<p className='md:text-xl lg:text-lg mb-0'>Wind: {search.wind?.deg}   deg</p>}
+        {search == '' ? <p className='md:text-xl lg:text-lg'>Preasure: {data.main?.pressure}</p>:<p className='md:text-xl lg:text-lg'>Preasure: {search.main?.pressure}</p>}
         </div>
         <div className='flex-auto right w-40 sm:w-50'>
         <div>
         {search == '' ? <img className='weather-logo' src={`https://openweathermap.org/img/w/${mainIcon?.icon}.png`} alt='img' />:<img className='weather-logo' src={`https://openweathermap.org/img/w/${secondIcon?.icon}.png`} alt='img' />}
-        {search == '' ?<p className='text-xl font-semibold text-center'>{mainIcon?.description}</p>:<p className='text-xl font-semibold text-center'>{secondIcon?.description}</p>}
+        {search == '' ?<p className='text-lg lg:text-xl font-semibold text-center'>{mainIcon?.description}</p>:<p className='text-xl font-semibold text-center'>{secondIcon?.description}</p>}
         </div>
         </div>
     </div>
