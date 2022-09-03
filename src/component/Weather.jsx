@@ -40,7 +40,7 @@ export default function Weather() {
       }
     }
     getWeather()
-  }, [lat, long]);
+  }, [lat, long, search]);
 
   const getSearch = async (event) =>{
     try {
