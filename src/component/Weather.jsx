@@ -68,6 +68,7 @@ export default function Weather() {
 
   return (
     <div>
+
       <div className='mt-5'>
         <form>   
             <div className="relative container-search">
@@ -87,7 +88,7 @@ export default function Weather() {
     {/* container Weather */}
     {isLoading? <Loading /> :  
     <div className='my-6 weather-bg'>
-    <div className='flex mx-10 py-5'>
+    <div className='flex mx-5 lg:mx-10 py-5'>
         <div className='flex-auto w-60 sm:w-50 left'>
         {search == '' ? <p className='text-2xl lg:text-4xl font-semibold mb-2'>{data.name}</p>:<p className='text-2xl lg:text-4xl font-semibold mb-2'>{search.name}</p>}
         <p className='text-sm lg:text-md'>{getDate(new Date)} / {getCurrentDate()}</p>
