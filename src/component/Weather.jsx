@@ -92,7 +92,7 @@ export default function Weather() {
         {search == '' ? <p className='text-2xl lg:text-4xl font-semibold mb-2'>{data.name}</p>:<p className='text-2xl lg:text-4xl font-semibold mb-2'>{search.name}</p>}
         <p className='text-sm lg:text-md'>{getDate(new Date)} / {getCurrentDate()}</p>
         {search == '' ? <h1 className='text-7xl font-bold lg:text-8xl mb-2'>{Math.floor(data.main?.temp)}°</h1>:<h1 className='text-7xl font-bold lg:text-8xl mb-2'>{Math.round(search.main?.temp)}°</h1>}
-        {search == '' ? <p className='md:text-xl lg:text-lg mb-0'>Wind: {data.wind?.deg}   deg</p>:<p className='md:text-xl lg:text-lg mb-0'>Wind: {search.wind?.deg}   deg</p>}
+        {search == '' ? <p className='md:text-xl lg:text-lg mb-0'>Wind: {data.wind?.deg} deg</p>:<p className='md:text-xl lg:text-lg mb-0'>Wind: {search.wind?.deg}   deg</p>}
         {search == '' ? <p className='md:text-xl lg:text-lg'>Preasure: {data.main?.pressure}</p>:<p className='md:text-xl lg:text-lg'>Preasure: {search.main?.pressure}</p>}
         </div>
         <div className='flex-auto right w-40 sm:w-50'>
